@@ -1,4 +1,7 @@
-resource "aws_instance" "shahid-dev-ec2-terraform-afaq" {
-  ami           =         "ami-00c08ad1a6ca8ca7c"
-  instance_type =         "t2.micro"
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
 }
